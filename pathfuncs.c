@@ -8,31 +8,8 @@
   * @hist_list: ...
   * Description: ...
   * Return: ...
-
-int print_env(char **args, char ***env, node_t **path_1ist, node_t **hist_1ist)
-{
-	int i = 0;
-	char **environ;
-	(void) args;
-
-	environ = *env;
-	if (!environ)
-		return (-1);
-	while (environ[i])
-	{
-		write(STDOUT_FILENO, environ[i], _strlen(environ[i]));
-		write(STDOUT_FILENO, "\n", 1);
-		++i;
-	}
-	return (0);
-}
 */
 
-/*
- * Alternative print_env function if the above doesn't work
- * print_env - prints the current environment
- * Return: void
- */
 void print_env(void)
 {
 	int i = 0;
